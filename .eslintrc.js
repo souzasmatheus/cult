@@ -34,6 +34,7 @@ module.exports = {
   rules: {
     'object-curly-spacing': ['error', 'always'],
     'react/jsx-filename-extension': ['error', { extensions: ['.jsx', '.tsx'] }],
+    "react/react-in-jsx-scope": "off",
     'react/prop-types': 0,
     'react/display-name': 0,
     '@typescript-eslint/member-delimiter-style': 0,
