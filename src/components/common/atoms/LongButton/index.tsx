@@ -1,11 +1,14 @@
-import React from 'react';
+import { FC } from 'react';
 
 import { StyledButton } from './styled';
 
-type Props = {};
+type Props = {
+  onClick: () => void;
+  isSelected?: boolean;
+};
 
-const LongButton = (props: Props) => {
-  return <StyledButton>LongButton</StyledButton>;
+const LongButton: FC<Props> = ({ children, onClick, isSelected }) => {
+  return <StyledButton {...{ onClick, isSelected }}>{children}</StyledButton>;
 };
 
 export default LongButton;
