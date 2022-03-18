@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
-    "baseUrl": "src",
+    "rootDir": ".",
+    "baseUrl": ".",
     "paths": {
       "src/*": [
-        "*"
+        "./src/*"
       ]
     },
     "target": "es5",
@@ -28,5 +29,5 @@
   },
   "include": [
     "src"
-  ]
+  ],
 }
