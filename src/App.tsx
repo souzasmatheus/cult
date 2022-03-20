@@ -1,6 +1,15 @@
+import './index.css';
+
+import { ThemeProvider } from 'styled-components';
+
+import { LongButton } from 'src/components/common/atoms';
+import theme from 'src/config/theme';
+
 function App() {
   return (
-    <div/>
+    <ThemeProvider theme={theme}>
+      <LongButton onClick={() => null}>Example</LongButton>
+    </ThemeProvider>
   );
 }
 
