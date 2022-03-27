@@ -1,8 +1,14 @@
-export {};
+import { FaSearch } from 'react-icons/fa';
+import styled from 'styled-components';
 
+const StyledMagnifierIcon = styled(FaSearch).attrs({
+  size: 20,
+})`
+  cursor: pointer;
+  color: green;
+`;
 
-`
-.box {
+const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -14,30 +20,16 @@ export {};
   border-bottom-left-radius: 10px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-}
+`;
 
-.box input {
+const Input = styled.input<{ foo?: string }>`
   width: 80%;
   height: 90%;
   border: none;
-}
-.box input:focus {
-  outline: none;
-}
 
-.box button {
-  width: 10%;
-  height: 90%;
-  background: none;
-  border: none;
-}
+  &:focus {
+    outline: none;
+  }
+`;
 
-.box button:hover {
-  opacity: 0.7;
-}
-
-.box button:active {
-  transform: scale(0.9);
-}
-
-`
+export { Wrapper, Input, StyledMagnifierIcon };

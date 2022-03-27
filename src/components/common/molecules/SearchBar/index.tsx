@@ -1,14 +1,21 @@
 import { FC } from 'react';
+
 import { FaSearch } from 'react-icons/fa';
 
-type Props = {};
+import { Wrapper, Input, StyledMagnifierIcon } from './styled';
 
-const SearchBar: FC<Props> = () => {
+type Props = {
+  onSubmit: () => void;
+};
+
+const SearchBar = ({ onSubmit }: Props) => {
   return (
-    <div>
-      <h1>SearchBar</h1>
-      <FaSearch />
-    </div>
+    <Wrapper>
+      <Input />
+      {/* <h1>SearchBar</h1>
+      <FaSearch /> */}
+      <StyledMagnifierIcon onClick={onSubmit} />
+    </Wrapper>
   );
 };
 
