@@ -11,7 +11,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <SearchBar
         placeholderText="Search"
-        onSubmit={() => console.log('clicked')}
+        onSubmit={() => console.log('submitted')}
       />
       <LongButton onClick={() => null}>Example</LongButton>
     </ThemeProvider>
