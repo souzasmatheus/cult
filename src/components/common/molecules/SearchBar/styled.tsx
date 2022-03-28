@@ -17,7 +17,7 @@ const Wrapper = styled.div`
   background: ${({ theme }) => theme.colors.grey.mist};
   width: 15rem;
   height: 2rem;
-  border: 2px solid ${({ theme }) => theme.colors.grey.rockport};
+  border: 2px solid ${({ theme }) => theme.colors.grey.deepmist};
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   border-top-right-radius: 20px;

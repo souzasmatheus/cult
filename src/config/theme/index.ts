@@ -6,6 +6,7 @@ declare module 'styled-components' {
       grey: {
         mercury: string;
         mist: string;
+        deepmist: string;
         rockport: string;
       };
       white: {
@@ -26,6 +27,7 @@ const theme: DefaultTheme = {
     grey: {
       mercury: '#e6e6e6',
       mist: '#fafafa',
+      deepmist: '#f0f0f0',
       rockport: '#b7b7b7',
     },
     white: {
