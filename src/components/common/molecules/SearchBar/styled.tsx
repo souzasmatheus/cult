@@ -1,11 +1,11 @@
 import { FaSearch } from 'react-icons/fa';
 import styled from 'styled-components';
 
-const StyledMagnifierIcon = styled(FaSearch).attrs({
-  size: 20,
-})`
+const StyledMagnifierIcon = styled(FaSearch).attrs({})`
   cursor: pointer;
-  color: green;
+  &:active {
+    transform: scale(0.9);
+  }
 `;
 
 const Wrapper = styled.div`
@@ -13,6 +13,7 @@ const Wrapper = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  background: ${({ theme }) => theme.colors.grey.mercury};
   width: 13rem;
   height: 2rem;
   border: 2px solid black;
@@ -26,6 +27,7 @@ const Input = styled.input<{ foo?: string }>`
   width: 80%;
   height: 90%;
   border: none;
+  background: ${({ theme }) => theme.colors.grey.mercury};
 
   &:focus {
     outline: none;
