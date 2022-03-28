@@ -8,7 +8,14 @@ type Props = {
 const SearchBar = ({ onSubmit, placeholderText }: Props) => {
   return (
     <Wrapper>
-      <Input placeholder={placeholderText} />
+      <Input
+        onKeyPress={(e: any) => {
+          if (e.key === 'Enter') {
+            onSubmit();
+          }
+        }}
+        placeholder={placeholderText}
+      />
       <StyledMagnifierIcon onClick={onSubmit} />
     </Wrapper>
   );
