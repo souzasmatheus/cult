@@ -9,7 +9,10 @@ import theme from 'src/config/theme';
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <SearchBar onSubmit={() => console.log('clicked')} />
+      <SearchBar
+        placeholderText="Search"
+        onSubmit={() => console.log('clicked')}
+      />
       <LongButton onClick={() => null}>Example</LongButton>
     </ThemeProvider>
   );

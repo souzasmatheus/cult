@@ -6,6 +6,7 @@ const StyledMagnifierIcon = styled(FaSearch).attrs({})`
   &:active {
     transform: scale(0.9);
   }
+  color: ${({ theme }) => theme.colors.grey.rockport};
 `;
 
 const Wrapper = styled.div`
@@ -13,24 +14,29 @@ const Wrapper = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background: ${({ theme }) => theme.colors.grey.mercury};
-  width: 13rem;
+  background: ${({ theme }) => theme.colors.grey.mist};
+  width: 15rem;
   height: 2rem;
-  border: 2px solid black;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border: 2px solid ${({ theme }) => theme.colors.grey.rockport};
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 `;
 
 const Input = styled.input<{ foo?: string }>`
   width: 80%;
   height: 90%;
   border: none;
-  background: ${({ theme }) => theme.colors.grey.mercury};
+  background: ${({ theme }) => theme.colors.grey.mist};
+  color: ${({ theme }) => theme.colors.grey.rockport};
 
   &:focus {
     outline: none;
+  }
+
+  ::placeholder {
+    color: ${({ theme }) => theme.colors.grey.rockport};
   }
 `;
 

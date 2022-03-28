@@ -2,12 +2,13 @@ import { Wrapper, Input, StyledMagnifierIcon } from './styled';
 
 type Props = {
   onSubmit: () => void;
+  placeholderText: string;
 };
 
-const SearchBar = ({ onSubmit }: Props) => {
+const SearchBar = ({ onSubmit, placeholderText }: Props) => {
   return (
     <Wrapper>
-      <Input />
+      <Input placeholder={placeholderText} />
       <StyledMagnifierIcon onClick={onSubmit} />
     </Wrapper>
   );
