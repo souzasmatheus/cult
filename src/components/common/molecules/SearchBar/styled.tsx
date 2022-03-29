@@ -1,43 +1,43 @@
-export {};
+import { FaSearch } from 'react-icons/fa';
+import styled from 'styled-components';
 
+const StyledMagnifierIcon = styled(FaSearch).attrs({})`
+  cursor: pointer;
+  &:active {
+    transform: scale(0.9);
+  }
+  color: ${({ theme }) => theme.colors.grey.rockport};
+`;
 
-`
-.box {
+const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 13rem;
+  background: ${({ theme }) => theme.colors.grey.mist};
+  width: 15rem;
   height: 2rem;
-  border: 2px solid black;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
+  border: 2px solid ${({ theme }) => theme.colors.grey.deepmist};
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+`;
 
-.box input {
+const Input = styled.input<{ foo?: string }>`
   width: 80%;
   height: 90%;
   border: none;
-}
-.box input:focus {
-  outline: none;
-}
+  background: ${({ theme }) => theme.colors.grey.mist};
+  color: ${({ theme }) => theme.colors.grey.rockport};
 
-.box button {
-  width: 10%;
-  height: 90%;
-  background: none;
-  border: none;
-}
+  &:focus {
+    outline: none;
+  }
 
-.box button:hover {
-  opacity: 0.7;
-}
+  ::placeholder {
+    color: ${({ theme }) => theme.colors.grey.rockport};
+  }
+`;
 
-.box button:active {
-  transform: scale(0.9);
-}
-
-`
+export { Wrapper, Input, StyledMagnifierIcon };

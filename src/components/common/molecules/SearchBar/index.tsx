@@ -1,14 +1,23 @@
-import { FC } from 'react';
-import { FaSearch } from 'react-icons/fa';
+import { Wrapper, Input, StyledMagnifierIcon } from './styled';
+import { KeyboardEvent } from 'react';
 
-type Props = {};
+type Props = {
+  onSubmit: () => void;
+  placeholderText: string;
+};
 
-const SearchBar: FC<Props> = () => {
+const SearchBar = ({ onSubmit, placeholderText }: Props) => {
+  const handleKeyPress = (e: KeyboardEvent): void => {
+    if (e.key === 'Enter') {
+      onSubmit();
+    }
+  };
+
   return (
-    <div>
-      <h1>SearchBar</h1>
-      <FaSearch />
-    </div>
+    <Wrapper>
+      <Input onKeyPress={handleKeyPress} placeholder={placeholderText} />
+      <StyledMagnifierIcon onClick={onSubmit} />
+    </Wrapper>
   );
 };
 
