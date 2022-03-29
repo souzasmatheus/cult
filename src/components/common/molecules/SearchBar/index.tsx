@@ -1,6 +1,7 @@
 import { KeyboardEvent } from 'react';
 
 import { Wrapper, Input, StyledMagnifierIcon } from './styled';
+import { KeyboardEvent } from 'react';
 
 type Props = {
   onSubmit: () => void;
