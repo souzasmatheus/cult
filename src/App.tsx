@@ -2,7 +2,7 @@ import './index.css';
 
 import { ThemeProvider } from 'styled-components';
 
-import { LongButton } from 'src/components/common/atoms/';
+import { LongButton, ActionButton } from 'src/components/common/atoms/';
 import { SearchBar } from 'src/components/common/molecules/';
 import theme from 'src/config/theme';
 
@@ -14,6 +14,7 @@ function App() {
         onSubmit={() => console.log('submitted')}
       />
       <LongButton onClick={() => null}>Example</LongButton>
+      <ActionButton />
     </ThemeProvider>
   );
 }
