@@ -1,4 +1,5 @@
 import { Wrapper, Input, StyledMagnifierIcon } from './styled';
+import { KeyboardEvent } from 'react';
 
 type Props = {
   onSubmit: () => void;
@@ -6,16 +7,15 @@ type Props = {
 };
 
 const SearchBar = ({ onSubmit, placeholderText }: Props) => {
+  const handleKeyPress = (e: KeyboardEvent): void => {
+    if (e.key === 'Enter') {
+      onSubmit();
+    }
+  };
+
   return (
     <Wrapper>
-      <Input
-        onKeyPress={(e: any) => {
-          if (e.key === 'Enter') {
-            onSubmit();
-          }
-        }}
-        placeholder={placeholderText}
-      />
+      <Input onKeyPress={handleKeyPress} placeholder={placeholderText} />
       <StyledMagnifierIcon onClick={onSubmit} />
     </Wrapper>
   );
