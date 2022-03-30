@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { FaHeart } from 'react-icons/fa';
 
 const Wrapper = styled.div`
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -10,15 +10,21 @@ const Wrapper = styled.div`
   height: 1.5rem;
 `;
 
-const StyledIcon = styled(FaHeart)`
-  color: ${({ theme }) => theme.colors.black.default};
-  width: 40%;
+const StyledIcon = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  #kid {
+    color: ${({ theme }) => theme.colors.black.default};
+    width: 12px;
+    padding-left: 1px;
+  }
 `;
 
 const StyledCount = styled.p`
   color: ${({ theme }) => theme.colors.black.default};
   font-size: small;
-  padding-left: 2px;
+  padding-left: 1.7px;
   padding-top: 1px;
 `;
 
