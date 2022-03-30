@@ -18,6 +18,10 @@ const StyledIcon = styled.div`
     color: ${({ theme }) => theme.colors.black.default};
     width: 12px;
     padding-left: 1px;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.7;
+    }
   }
 `;
 
