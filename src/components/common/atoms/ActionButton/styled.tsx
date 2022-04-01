@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { FaHeart } from 'react-icons/fa';
+
+import { CustomIcon } from 'src/components/common/atoms';
 
 const Wrapper = styled.div`
   display: inline-flex;
@@ -10,18 +11,14 @@ const Wrapper = styled.div`
   height: 1.5rem;
 `;
 
-const StyledIcon = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  #kid {
-    color: ${({ theme }) => theme.colors.black.default};
-    width: 12px;
-    padding-left: 1px;
-    cursor: pointer;
-    &:hover {
-      opacity: 0.7;
-    }
+const StyledIcon = styled((props) => <CustomIcon {...props} />).attrs({
+  size: 12,
+})`
+  cursor: pointer;
+  padding-left: 1px;
+
+  &:hover {
+    opacity: 0.7;
   }
 `;
 
