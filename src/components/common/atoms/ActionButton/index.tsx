@@ -5,13 +5,13 @@ import { Wrapper, StyledCount, StyledIcon } from './styled';
 type Props = {
   counter?: number | string;
   icon: IconType;
-  onPress: () => void;
+  onClick: () => void;
 };
 
-const ActionButton = ({ counter, icon, onPress }: Props) => {
+const ActionButton = ({ counter, icon, onClick }: Props) => {
   return (
     <Wrapper>
-      <StyledIcon Icon={icon} onClick={onPress} />
+      <StyledIcon Icon={icon} onClick={onClick} />
       <StyledCount>{counter ?? 0}</StyledCount>
     </Wrapper>
   );
