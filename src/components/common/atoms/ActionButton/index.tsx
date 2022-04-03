@@ -12,7 +12,7 @@ const ActionButton = ({ counter, icon, onPress }: Props) => {
   return (
     <Wrapper>
       <StyledIcon Icon={icon} onClick={onPress} />
-      <StyledCount>{!counter ? 0 : counter}</StyledCount>
+      <StyledCount>{counter ?? 0}</StyledCount>
     </Wrapper>
   );
 };
