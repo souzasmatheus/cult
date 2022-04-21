@@ -11,9 +11,7 @@ const Wrapper = styled.div`
   height: 1.5rem;
 `;
 
-const StyledIcon = styled((props) => <CustomIcon {...props} />).attrs({
-  size: 12,
-})`
+const StyledIcon = styled((props) => <CustomIcon {...props} />)`
   cursor: pointer;
   padding-left: 1px;
 
