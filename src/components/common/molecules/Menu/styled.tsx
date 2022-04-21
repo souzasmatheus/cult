@@ -1,20 +1,17 @@
 import styled from 'styled-components';
+
 import { Avatar, ActionButton } from '../../atoms';
 
 const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  width: 10%;
+  justify-content: space-between;
 `;
 
-const StyledAvatar = styled(Avatar)`
-  display: none;
-`;
+const StyledAvatar = styled(Avatar)``;
 
-const StyledActionButton = styled(ActionButton)`
-  color: blue;
-  height: 300px;
-`;
+const StyledActionButton = styled(ActionButton)``;
 
 export { Wrapper, StyledAvatar, StyledActionButton };
