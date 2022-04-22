@@ -9,8 +9,10 @@ import { NavBar } from './components/common/organisms';
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <div style={{ maxWidth: '1200px' }}>
-        <NavBar />
+      <div style={{ border: '1px grey solid' }}>
+        <div style={{ maxWidth: '1200px', margin: 'auto' }}>
+          <NavBar />
+        </div>
       </div>
     </ThemeProvider>
   );

@@ -7,6 +7,7 @@ const Wrapper = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  width: 32%;
 `;
 
 const StyledAvatar = styled(Avatar)``;

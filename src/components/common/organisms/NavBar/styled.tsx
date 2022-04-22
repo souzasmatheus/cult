@@ -5,20 +5,21 @@ const MainWrapper = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 20px;
-  border-bottom: 1px solid ${({ theme }) => theme.colors.grey.rockport};
+  width: 100%;
 `;
 const WrapperLeft = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 40%;
 `;
 const WrapperRight = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 30%;
 `;
 
 export { MainWrapper, WrapperLeft, WrapperRight };
