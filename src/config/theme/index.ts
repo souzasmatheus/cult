@@ -8,6 +8,7 @@ declare module 'styled-components' {
         mist: string;
         deepmist: string;
         rockport: string;
+        hammertime: string;
       };
       white: {
         default: string;
@@ -29,6 +30,7 @@ const theme: DefaultTheme = {
       mist: '#fafafa',
       deepmist: '#f0f0f0',
       rockport: '#b7b7b7',
+      hammertime: '#757575',
     },
     white: {
       default: '#ffffff',

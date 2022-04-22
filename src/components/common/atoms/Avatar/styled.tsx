@@ -6,6 +6,7 @@ const AvatarImg = styled.img`
   object-fit: cover;
   object-position: center;
   border-radius: 50%;
+  cursor: pointer;
 `;
 
 export { AvatarImg };

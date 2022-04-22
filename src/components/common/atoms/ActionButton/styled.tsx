@@ -14,6 +14,7 @@ const Wrapper = styled.div`
 const StyledIcon = styled((props) => <CustomIcon {...props} />)`
   cursor: pointer;
   padding-left: 1px;
+  transition: opacity 0.5s;
 
   &:hover {
     opacity: 0.7;

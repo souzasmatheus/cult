@@ -12,6 +12,8 @@ const Wrapper = styled.div`
 
 const StyledAvatar = styled(Avatar)``;
 
-const StyledActionButton = styled(ActionButton)``;
+const StyledActionButton = styled(ActionButton)`
+  color: ${({ theme }) => theme.colors.grey.hammertime};
+`;
 
 export { Wrapper, StyledAvatar, StyledActionButton };
