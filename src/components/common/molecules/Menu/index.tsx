@@ -1,12 +1,18 @@
 import { AiOutlineMail } from 'react-icons/ai';
 import { BsFillGearFill } from 'react-icons/bs';
 
-import { Wrapper, StyledAvatar, StyledActionButton } from './styled';
+import {
+  Wrapper,
+  StyledAvatar,
+  StyledActionButton,
+  LeftBorder,
+} from './styled';
 
 const Menu = () => {
   return (
     <>
       <Wrapper>
+        <LeftBorder />
         <StyledAvatar
           handleClick={() => console.log('avatar menu')}
           pic="https://mapio.net/images-p/12023046.jpg"
