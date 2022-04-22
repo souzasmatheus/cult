@@ -7,6 +7,7 @@ const AvatarImg = styled.img`
   object-position: center;
   border-radius: 50%;
   cursor: pointer;
+  border: 3px solid ${({ theme }) => theme.colors.purple.scampi};
 `;
 
 export { AvatarImg };
