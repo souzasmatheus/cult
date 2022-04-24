@@ -1,8 +1,10 @@
+import { FC } from 'react';
+
 import { NavBar } from 'src/components/common/organisms';
 
 import { StyledContainer, ContentContainer, Border } from './styled';
 
-const Container = ({ children }: any) => {
+const Container: FC = ({ children }) => {
   return (
     <>
       <Border>

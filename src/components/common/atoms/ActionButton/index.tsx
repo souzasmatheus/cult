@@ -25,7 +25,7 @@ const ActionButton = ({
         onClick={onClick}
         className={className}
       />
-      <StyledCount className={className}>{counter ?? null}</StyledCount>
+      <StyledCount className={className}>{counter}</StyledCount>
     </Wrapper>
   );
 };

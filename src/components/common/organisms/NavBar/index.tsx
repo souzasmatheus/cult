@@ -8,8 +8,8 @@ const NavBar = () => {
     <MainWrapper>
       <WrapperLeft>
         <Logo
-          handleClick={() => console.log('logo clicked')}
-          pic="https://placeholderlogo.com/img/placeholder-logo-1.png"
+          onClick={() => console.log('logo clicked')}
+          src="https://placeholderlogo.com/img/placeholder-logo-1.png"
         />
         <SearchBar
           onSubmit={() => console.log('search bar submit')}

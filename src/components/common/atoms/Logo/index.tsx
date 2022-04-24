@@ -1,12 +1,12 @@
 import { LogoImg } from './styled';
 
 type Props = {
-  handleClick: () => void;
-  pic: string;
+  onClick: () => void;
+  src: string;
 };
 
-const Logo = ({ handleClick, pic }: Props) => {
-  return <LogoImg src={pic} onClick={handleClick} />;
+const Logo = ({ onClick, src }: Props) => {
+  return <LogoImg {...{ onClick, src }} />;
 };
 
 export default Logo;

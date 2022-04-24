@@ -1,13 +1,13 @@
 import { AvatarImg } from './styled';
 
 type Props = {
-  handleClick: () => void;
-  pic: string;
+  onClick: () => void;
+  src: string;
   className?: string;
 };
 
-const Avatar = ({ handleClick, pic, className }: Props) => {
-  return <AvatarImg src={pic} onClick={handleClick} className={className} />;
+const Avatar = ({ onClick, src, className }: Props) => {
+  return <AvatarImg {...{ src, onClick, className }} />;
 };
 
 export default Avatar;

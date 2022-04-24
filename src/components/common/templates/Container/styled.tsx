@@ -10,7 +10,7 @@ const ContentContainer = styled(StyledContainer)`
 `;
 
 const Border = styled.div`
-  border: 1px solid ${({ theme }) => theme.colors.grey.deepmist};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.grey.deepmist};
 `;
 
 export { StyledContainer, ContentContainer, Border };
