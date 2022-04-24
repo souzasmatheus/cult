@@ -4,17 +4,14 @@ import { ThemeProvider } from 'styled-components';
 
 import theme from 'src/config/theme';
 
-import { NavBar } from './components/common/organisms';
-import { Container, Border } from './components/common/templates';
+import { Container } from './components/common/templates';
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Border>
-        <Container>
-          <NavBar />
-        </Container>
-      </Border>
+      <Container>
+        <h1>HELLO</h1>
+      </Container>
     </ThemeProvider>
   );
 }
