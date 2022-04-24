@@ -1,7 +1,6 @@
 import { NavBar } from 'src/components/common/organisms';
-import { Border } from 'src/components/common/templates';
 
-import { StyledContainer, ContentContainer } from './styled';
+import { StyledContainer, ContentContainer, Border } from './styled';
 
 const Container = ({ children }: any) => {
   return (

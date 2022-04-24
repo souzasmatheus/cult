@@ -9,4 +9,8 @@ const ContentContainer = styled(StyledContainer)`
   padding-top: 25px;
 `;
 
-export { StyledContainer, ContentContainer };
+const Border = styled.div`
+  border: 1px solid ${({ theme }) => theme.colors.grey.deepmist};
+`;
+
+export { StyledContainer, ContentContainer, Border };
