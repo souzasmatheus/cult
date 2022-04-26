@@ -2,16 +2,14 @@ import './index.css';
 
 import { ThemeProvider } from 'styled-components';
 
+import { DropdownMenu } from 'src/components/common/atoms';
+import { Container } from 'src/components/common/templates';
 import theme from 'src/config/theme';
-
-import { Container } from './components/common/templates';
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Container>
-        <h1>HELLO</h1>
-      </Container>
+      <Container></Container>
     </ThemeProvider>
   );
 }

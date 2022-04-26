@@ -6,16 +6,37 @@ import {
   StyledAvatar,
   StyledActionButton,
   LeftBorder,
+  DropdownWrapper,
+  StyledDropdownMenu,
 } from './styled';
+
+const avatarLinks = [
+  {
+    title: 'Fart',
+    url: '#',
+  },
+  {
+    title: 'Ezekiel',
+    url: '#',
+  },
+  {
+    title: 'Coding',
+    url: '#',
+  },
+];
 
 const Menu = () => {
   return (
     <Wrapper>
       <LeftBorder />
-      <StyledAvatar
-        onClick={() => console.log('avatar menu')}
-        src="https://mapio.net/images-p/12023046.jpg"
-      />
+      <DropdownWrapper>
+        <StyledAvatar
+          onClick={() => console.log('avatar menu')}
+          src="https://mapio.net/images-p/12023046.jpg"
+        />
+        <StyledDropdownMenu links={avatarLinks} />
+      </DropdownWrapper>
+
       <StyledActionButton
         iconSize={20}
         icon={AiOutlineMail}
