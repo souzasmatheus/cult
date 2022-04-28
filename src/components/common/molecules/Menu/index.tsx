@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import { AiOutlineMail } from 'react-icons/ai';
 import { BsFillGearFill } from 'react-icons/bs';
 
@@ -26,15 +28,17 @@ const avatarLinks = [
 ];
 
 const Menu = () => {
+  const [isMenuShowing, setIsMenuShowing] = useState(false);
+
   return (
     <Wrapper>
       <LeftBorder />
       <DropdownWrapper>
         <StyledAvatar
-          onClick={() => console.log('avatar menu')}
+          onClick={() => setIsMenuShowing(!isMenuShowing)}
           src="https://mapio.net/images-p/12023046.jpg"
         />
-        <StyledDropdownMenu links={avatarLinks} />
+        {isMenuShowing && <StyledDropdownMenu links={avatarLinks} />}
       </DropdownWrapper>
 
       <StyledActionButton
