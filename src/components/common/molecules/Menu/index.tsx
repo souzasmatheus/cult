@@ -3,9 +3,10 @@ import { useState } from 'react';
 import { AiOutlineMail } from 'react-icons/ai';
 import { BsFillGearFill } from 'react-icons/bs';
 
+import { Avatar } from 'src/components/common/atoms';
+
 import {
   Wrapper,
-  StyledAvatar,
   StyledActionButton,
   LeftBorder,
   DropdownWrapper,
@@ -14,43 +15,53 @@ import {
 
 const avatarLinks = [
   {
-    title: 'Fart',
+    title: 'Avatar 1',
     url: '#',
   },
   {
-    title: 'Ezekiel',
+    title: 'Avatar 2',
     url: '#',
   },
   {
-    title: 'Coding',
+    title: 'Avatar 3',
     url: '#',
   },
 ];
 
 const Menu = () => {
-  const [isMenuShowing, setIsMenuShowing] = useState(false);
+  const [openMenu, setOpenMenu] = useState<null | number>(null);
+  const toggle = (num: number) => {
+    setOpenMenu((prevState) => (prevState !== num ? num : null));
+  };
 
   return (
     <Wrapper>
       <LeftBorder />
       <DropdownWrapper>
-        <StyledAvatar
-          onClick={() => setIsMenuShowing(!isMenuShowing)}
+        <Avatar
+          onClick={() => toggle(1)}
           src="https://mapio.net/images-p/12023046.jpg"
         />
-        {isMenuShowing && <StyledDropdownMenu links={avatarLinks} />}
+        {openMenu === 1 && <StyledDropdownMenu links={avatarLinks} />}
       </DropdownWrapper>
 
-      <StyledActionButton
-        iconSize={20}
-        icon={AiOutlineMail}
-        onClick={() => console.log('mail button menu')}
-      />
-      <StyledActionButton
-        iconSize={20}
-        icon={BsFillGearFill}
-        onClick={() => console.log('gear button menu')}
-      />
+      <DropdownWrapper>
+        <StyledActionButton
+          iconSize={20}
+          icon={AiOutlineMail}
+          onClick={() => toggle(2)}
+        />
+        {openMenu === 2 && <StyledDropdownMenu links={avatarLinks} />}
+      </DropdownWrapper>
+
+      <DropdownWrapper>
+        <StyledActionButton
+          iconSize={20}
+          icon={BsFillGearFill}
+          onClick={() => toggle(3)}
+        />
+        {openMenu === 3 && <StyledDropdownMenu links={avatarLinks} />}
+      </DropdownWrapper>
     </Wrapper>
   );
 };

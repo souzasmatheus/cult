@@ -1,10 +1,6 @@
 import styled from 'styled-components';
 
-import {
-  DropdownMenu,
-  Avatar,
-  ActionButton,
-} from 'src/components/common/atoms';
+import { DropdownMenu, ActionButton } from 'src/components/common/atoms';
 
 const Wrapper = styled.div`
   display: flex;
@@ -20,16 +16,14 @@ const LeftBorder = styled.div`
   border-left: solid 1px ${({ theme }) => theme.colors.grey.mercury};
 `;
 
-const StyledAvatar = styled(Avatar)``;
-
 const DropdownWrapper = styled.div`
   position: relative;
 `;
 
 const StyledDropdownMenu = styled(DropdownMenu)`
-  postion: absolute;
-  left: 0;
-  top: 100%;
+  position: absolute;
+  left: 0px;
+  top: 110%;
 `;
 
 const StyledActionButton = styled(ActionButton)`
@@ -38,7 +32,6 @@ const StyledActionButton = styled(ActionButton)`
 
 export {
   Wrapper,
-  StyledAvatar,
   StyledActionButton,
   LeftBorder,
   DropdownWrapper,
