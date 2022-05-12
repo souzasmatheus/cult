@@ -8,6 +8,7 @@ declare module 'styled-components' {
         mist: string;
         deepmist: string;
         rockport: string;
+        hammertime: string;
       };
       white: {
         default: string;
@@ -17,6 +18,7 @@ declare module 'styled-components' {
       };
       black: {
         default: string;
+        shadowBlack: string;
       };
     };
   }
@@ -29,6 +31,7 @@ const theme: DefaultTheme = {
       mist: '#fafafa',
       deepmist: '#f0f0f0',
       rockport: '#b7b7b7',
+      hammertime: '#757575',
     },
     white: {
       default: '#ffffff',
@@ -38,6 +41,7 @@ const theme: DefaultTheme = {
     },
     black: {
       default: '#000000',
+      shadowBlack: 'rgba(0, 0, 0, 0.1)',
     },
   },
 };

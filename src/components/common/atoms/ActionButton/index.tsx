@@ -6,13 +6,26 @@ type Props = {
   counter?: number | string;
   icon: IconType;
   onClick: () => void;
+  className?: string;
+  iconSize?: number | string;
 };
 
-const ActionButton = ({ counter, icon, onClick }: Props) => {
+const ActionButton = ({
+  counter,
+  icon,
+  onClick,
+  className,
+  iconSize = 12,
+}: Props) => {
   return (
     <Wrapper>
-      <StyledIcon Icon={icon} onClick={onClick} />
-      <StyledCount>{counter ?? 0}</StyledCount>
+      <StyledIcon
+        size={iconSize}
+        Icon={icon}
+        onClick={onClick}
+        className={className}
+      />
+      <StyledCount className={className}>{counter}</StyledCount>
     </Wrapper>
   );
 };
