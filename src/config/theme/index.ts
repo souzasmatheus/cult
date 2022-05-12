@@ -18,6 +18,7 @@ declare module 'styled-components' {
       };
       black: {
         default: string;
+        shadowBlack: string;
       };
     };
   }
@@ -40,6 +41,7 @@ const theme: DefaultTheme = {
     },
     black: {
       default: '#000000',
+      shadowBlack: 'rgba(0, 0, 0, 0.1)',
     },
   },
 };

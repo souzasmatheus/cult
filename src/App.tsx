@@ -8,7 +8,7 @@ import theme from 'src/config/theme';
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Container></Container>
+      <Container />
     </ThemeProvider>
   );
 }

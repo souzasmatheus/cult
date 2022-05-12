@@ -25,17 +25,5 @@ const NavBar = () => {
     </MainWrapper>
   );
 };
-/*
-<div flex space between>
-  <div flex space between>
-    logo
-    searchbar
-  </div>
-  <div flex space between>
-    long button
-    menu 
-  </div>
-</div>
-*/
 
 export default NavBar;

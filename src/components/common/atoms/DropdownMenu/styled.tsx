@@ -6,7 +6,7 @@ const Wrapper = styled.div`
   background: ${({ theme }) => theme.colors.grey.mist};
   display: inline-block;
   width: 90px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px ${({ theme }) => theme.colors.black.shadowBlack};
 
 `;
 
