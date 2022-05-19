@@ -1,5 +1,3 @@
-import { LongButton } from 'src/components/common/atoms';
-
 import { Wrapper, StyledLongButton } from './styled';
 
 const userCultList = [
