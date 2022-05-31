@@ -1,4 +1,9 @@
-import { Wrapper, StyledLongButton } from './styled';
+import {
+  ItemWrapper,
+  StyledLongButton,
+  Wrapper,
+  StyledRightArrow,
+} from './styled';
 
 const userCultList = [
   {
@@ -29,22 +34,69 @@ const userCultList = [
     name: 'The High Collective of Shoe7',
     link: 'https://google.com',
   },
+  {
+    name: 'The High Collective of Shoe7',
+    link: 'https://google.com',
+  },
+  {
+    name: 'The High Collective of Shoe7',
+    link: 'https://google.com',
+  },
+  {
+    name: 'The High Collective of Shoe7',
+    link: 'https://google.com',
+  },
+  {
+    name: 'The High Collective of Shoe7',
+    link: 'https://google.com',
+  },
+  {
+    name: 'The High Collective of Shoe7',
+    link: 'https://google.com',
+  },
+  {
+    name: 'The High Collective of Shoe7',
+    link: 'https://google.com',
+  },
+  {
+    name: 'The High Collective of Shoe7',
+    link: 'https://google.com',
+  },
+  {
+    name: 'The High Collective of Shoe7',
+    link: 'https://google.com',
+  },
+  {
+    name: 'The High Collective of Shoe7',
+    link: 'https://google.com',
+  },
+  {
+    name: 'The High Collective of Shoe7',
+    link: 'https://google.com',
+  },
 ];
 
 const HorizontalScroller = () => {
   return (
     <Wrapper>
-      {userCultList.map((item) => {
-        const { name, link } = item;
-        return (
-          <StyledLongButton
-            key={name}
-            onClick={() => window.open(link, '_self')}
-          >
-            {name}
-          </StyledLongButton>
-        );
-      })}
+      <ItemWrapper>
+        {userCultList.map((item) => {
+          const { name, link } = item;
+          return (
+            <StyledLongButton
+              key={name}
+              onClick={() => window.open(link, '_self')}
+            >
+              {name}
+            </StyledLongButton>
+          );
+        })}
+      </ItemWrapper>
+      <StyledRightArrow
+        onClick={() => {
+          console.log('fart');
+        }}
+      />
     </Wrapper>
   );
 };
