@@ -1,8 +1,11 @@
+import { MutableRefObject, useRef } from 'react';
+
 import {
   ItemWrapper,
   StyledLongButton,
   Wrapper,
   StyledRightArrow,
+  StyledLeftArrow,
 } from './styled';
 
 const userCultList = [
@@ -58,28 +61,27 @@ const userCultList = [
     name: 'The High Collective of Shoe7',
     link: 'https://google.com',
   },
-  {
-    name: 'The High Collective of Shoe7',
-    link: 'https://google.com',
-  },
-  {
-    name: 'The High Collective of Shoe7',
-    link: 'https://google.com',
-  },
-  {
-    name: 'The High Collective of Shoe7',
-    link: 'https://google.com',
-  },
-  {
-    name: 'The High Collective of Shoe7',
-    link: 'https://google.com',
-  },
 ];
 
 const HorizontalScroller = () => {
+  const scrollerRef = useRef<HTMLDivElement>(null);
+
+  const scrollRight = () => {
+    if (scrollerRef.current) {
+      scrollerRef.current.scrollLeft = scrollerRef.current.scrollLeft + 350;
+    }
+  };
+
+  const scrollLeft = () => {
+    if (scrollerRef.current) {
+      scrollerRef.current.scrollLeft = scrollerRef.current.scrollLeft - 350;
+    }
+  };
+
   return (
     <Wrapper>
-      <ItemWrapper>
+      <StyledLeftArrow onClick={scrollLeft} />
+      <ItemWrapper ref={scrollerRef}>
         {userCultList.map((item) => {
           const { name, link } = item;
           return (
@@ -92,11 +94,7 @@ const HorizontalScroller = () => {
           );
         })}
       </ItemWrapper>
-      <StyledRightArrow
-        onClick={() => {
-          console.log('fart');
-        }}
-      />
+      <StyledRightArrow onClick={scrollRight} />
     </Wrapper>
   );
 };

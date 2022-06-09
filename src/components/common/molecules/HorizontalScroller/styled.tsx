@@ -18,6 +18,7 @@ const ItemWrapper = styled.div`
   padding: 7px;
   overflow-x: auto;
   overscroll-behavior-inline: contain;
+  scroll-behavior: smooth;
   border: 1px solid ${({ theme }) => theme.colors.grey.deepmist};
   &::-webkit-scrollbar {
     -webkit-appearance: none;
@@ -43,5 +44,25 @@ const StyledRightArrow = styled(BiRightArrow)`
     color: ${({ theme }) => theme.colors.purple.scampi};
   }
 `;
+const StyledLeftArrow = styled(BiLeftArrow)`
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  left: -5px;
+  height: 100%;
+  color: transparent;
+  transition: 0.5s ease color;
+  cursor: pointer;
 
-export { ItemWrapper, StyledLongButton, Wrapper, StyledRightArrow };
+  &:hover {
+    color: ${({ theme }) => theme.colors.purple.scampi};
+  }
+`;
+
+export {
+  ItemWrapper,
+  StyledLongButton,
+  Wrapper,
+  StyledRightArrow,
+  StyledLeftArrow,
+};
