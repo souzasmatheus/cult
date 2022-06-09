@@ -1,4 +1,4 @@
-import { MutableRefObject, useRef } from 'react';
+import { useRef } from 'react';
 
 import {
   ItemWrapper,
